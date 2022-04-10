@@ -10,9 +10,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Eazy Doctor',
-      theme: AppBar(
-
+      theme: ThemeData(
+        primaryColor: Color.fromRGBO(23, 202, 172, 255),
       ),
+      home: MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
 }
