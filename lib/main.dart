@@ -1,3 +1,6 @@
+import 'package:eazyydoctor/homeScreen.dart';
+import 'package:eazyydoctor/login.dart';
+import 'package:eazyydoctor/themeData.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -11,9 +14,13 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Eazy Doctor',
       theme: ThemeData(
-        primaryColor: Color.fromRGBO(23, 202, 172, 255),
+        primaryColor: MyThemeData.primaryColor,
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      routes: {
+        HomeScreen.routeName: (buildContext)=>HomeScreen(),
+        LoginScreen.routeName: (buildContext)=>LoginScreen()
+    },
+      initialRoute: LoginScreen.routeName,
     );
   }
 }
