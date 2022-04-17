@@ -1,3 +1,4 @@
+import 'package:eazyydoctor/BMI/bmiCalculation.dart';
 import 'package:eazyydoctor/themeData.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -99,7 +100,9 @@ class BmiTap extends StatelessWidget {
 
                ],
              ),
-             ElevatedButton(onPressed: (){},
+             ElevatedButton(onPressed: (){
+               Navigator.pushReplacementNamed(context, BmiCalculation.routeName);
+             },
                  style:ElevatedButton.styleFrom(primary: MyThemeData.primaryColor),child: Text('Calculate'))
            ],
          ),

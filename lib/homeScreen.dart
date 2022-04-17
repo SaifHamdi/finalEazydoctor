@@ -28,9 +28,7 @@ class _HomeScreenState extends State<HomeScreen> {
           floatingActionButton: FloatingActionButton(backgroundColor: MyThemeData.primaryColor,
             child: Icon(Icons.settings),
             onPressed: (){
-            setState(() {
-
-            });
+            showSettingTap();
             },
           ),
           floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
@@ -80,6 +78,11 @@ class _HomeScreenState extends State<HomeScreen> {
       return EmergencyTap();
     }else
       return SettingTab();
+  }
+  void showSettingTap(){
+    showModalBottomSheet(context: context, builder: (buildContext){
+      return SettingTab();
+    });
   }
 }
 

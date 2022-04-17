@@ -1,3 +1,5 @@
+import 'package:eazyydoctor/BMI/bmiCalculation.dart';
+import 'package:eazyydoctor/Register.dart';
 import 'package:eazyydoctor/homeScreen.dart';
 import 'package:eazyydoctor/login.dart';
 import 'package:eazyydoctor/themeData.dart';
@@ -18,9 +20,10 @@ class MyApp extends StatelessWidget {
       ),
       routes: {
         HomeScreen.routeName: (buildContext)=>HomeScreen(),
-        LoginScreen.routeName: (buildContext)=>LoginScreen()
+        LoginScreen.routeName: (buildContext)=>LoginScreen(),
+        RegisterScreen.routeName: (buildContext)=> RegisterScreen(),
     },
-      initialRoute: LoginScreen.routeName,
+      initialRoute: RegisterScreen.routeName,
     );
   }
 }
