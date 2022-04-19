@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
-
 import 'utils.dart';
-
 class RegisterScreen extends StatelessWidget{
   static const String routeName= 'register';
   String firstName='',lastName='',userName='',password='',email='';
-var formKey=GlobalKey<FormState>();
+  var formKey=GlobalKey<FormState>();
   @override
   Widget build(BuildContext context) {
     return Stack(
@@ -35,7 +33,7 @@ var formKey=GlobalKey<FormState>();
                     ),
                     Container(
                       child: TextFormField(
-                        decoration: InputDecoration(labelText: 'last name'), onChanged: (text){
+                          decoration: InputDecoration(labelText: 'last name'), onChanged: (text){
                         lastName=text;
                       },
                           validator: (text){
@@ -48,7 +46,7 @@ var formKey=GlobalKey<FormState>();
                     ),
                     Container(
                       child: TextFormField(
-                        decoration: InputDecoration(labelText: ' username'),
+                          decoration: InputDecoration(labelText: ' username'),
                           onChanged: (text){
                             userName=text;
                           },
@@ -63,7 +61,7 @@ var formKey=GlobalKey<FormState>();
                     Container(
                       key: formKey,
                       child: TextFormField(
-                        decoration: InputDecoration(labelText: 'Email'),
+                          decoration: InputDecoration(labelText: 'Email'),
                           onChanged: (text){
                             email=text;
                           },
@@ -80,7 +78,7 @@ var formKey=GlobalKey<FormState>();
                     ),
                     Container(
                       child: TextFormField(
-                        decoration: InputDecoration(labelText: 'password'),
+                          decoration: InputDecoration(labelText: 'password'),
                           onChanged: (text){
                             password=text;
                           },
@@ -97,9 +95,9 @@ var formKey=GlobalKey<FormState>();
                     Container(
                       child: ElevatedButton(
                         onPressed: () {
-                      if(formKey.currentState?.validate()==true){
-                        createAccountWithFirebaseAuth();
-                      }
+                          if(formKey.currentState?.validate()==true){
+                            createAccountWithFirebaseAuth();
+                          }
                         },child: Text('create account'),
                       ),
                     )
