@@ -35,7 +35,7 @@ class _HomeScreenState extends State<HomeScreen> {
           bottomNavigationBar:
           Theme( data: Theme.of(context).copyWith(
               canvasColor: MyThemeData.primaryColor),
-            child: BottomAppBar(
+            child: BottomAppBar(elevation: 0,
               child: BottomNavigationBar(
                 onTap: (index){
                   currentPage=index;

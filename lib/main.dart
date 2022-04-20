@@ -1,3 +1,4 @@
+import 'package:eazyydoctor/Profile.dart';
 import 'package:eazyydoctor/Register.dart';
 import 'package:eazyydoctor/homeScreen.dart';
 import 'package:eazyydoctor/login.dart';
@@ -20,9 +21,10 @@ class MyApp extends StatelessWidget {
       routes: {
         HomeScreen.routeName: (buildContext)=>HomeScreen(),
         LoginScreen.routeName: (buildContext)=>LoginScreen(),
-        RegisterScreen.routeName: (buildContext)=>RegisterScreen()
+        RegisterScreen.routeName: (buildContext)=>RegisterScreen(),
+        Profile.routName: (buildContext)=>Profile()
     },
-      initialRoute: RegisterScreen.routeName,
+      initialRoute: LoginScreen.routeName,
     );
   }
 }
