@@ -1,6 +1,4 @@
-
-
-import 'package:eazyydoctor/Profile.dart';
+import 'package:eazyydoctor/Setting/Profile.dart';
 import 'package:eazyydoctor/login.dart';
 import 'package:flutter/material.dart';
 

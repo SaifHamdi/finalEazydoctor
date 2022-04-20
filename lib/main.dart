@@ -1,4 +1,4 @@
-import 'package:eazyydoctor/Profile.dart';
+import 'package:eazyydoctor/Setting/Profile.dart';
 import 'package:eazyydoctor/Register.dart';
 import 'package:eazyydoctor/homeScreen.dart';
 import 'package:eazyydoctor/login.dart';
