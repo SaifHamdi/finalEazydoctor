@@ -13,6 +13,7 @@ class _BmiTapState extends State<BmiTap> {
   int height=180;
   int weight=30;
   int age=18;
+  int currentIndex=0;
   @override
   Widget build(BuildContext context) {
     return Stack(
@@ -25,25 +26,8 @@ class _BmiTapState extends State<BmiTap> {
               Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
 
-                  Container(
-                    height:150,
-                    width: 150,
-                    child: Card(color: MyThemeData.primaryColor,
-                      child: ListTile(title: Text('MALE',style: TextStyle(fontSize: 20),),
-                        trailing: Icon(Icons.male_outlined,size: 30,),),
-                    ),
-
-                  ),
-
-                  Container(
-                    height:150,
-                    width: 150,
-                    child: Card(child: ListTile(title: Text('FEMALE',style: TextStyle(fontSize: 20),),
-                      trailing: Icon(Icons.female_outlined,size: 30,),),
-                      color: MyThemeData.primaryColor,
-                    ),
-                  ),
-
+                  radioButton('MAN', Colors.blue, 0),
+                  radioButton('WOMAN', Colors.pinkAccent, 1)
                 ],
               ),
               Container(
@@ -153,5 +137,30 @@ class _BmiTapState extends State<BmiTap> {
         )
       ],
     );
+  }
+  void changeIndex(int index){
+    setState(() {
+      currentIndex=index;
+    });
+  }
+  Widget radioButton(String value,Color color,int index){
+    return  Expanded(child:
+    Container(
+      height: 150.0,
+      child:Card(
+        margin: EdgeInsets.symmetric(horizontal: 12.0),
+        color: currentIndex==index?color:Colors.grey[200],
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(8.0),
+        ),
+        child:
+        InkWell(
+          child: Center(child: Text(value,style:TextStyle(color: currentIndex==index?Colors.white:color,fontSize:22.0, fontWeight:FontWeight.bold, ),)),
+          onTap: (){
+            changeIndex(index);
+          },
+        ),
+      ) ,
+    ),);
   }
 }

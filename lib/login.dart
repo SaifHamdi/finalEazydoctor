@@ -1,3 +1,4 @@
+import 'package:eazyydoctor/Register.dart';
 import 'package:eazyydoctor/homeScreen.dart';
 import 'package:flutter/material.dart';
 
@@ -29,7 +30,10 @@ class LoginScreen extends StatelessWidget {
                       Navigator.pushNamed(context, HomeScreen.routeName);
                     },child: Text('login'),
                   ),
-                )
+                ),
+                ElevatedButton(onPressed: (){
+                  Navigator.pushNamed(context, RegisterScreen.routeName);
+                }, child: Text('Register'))
               ],
             ),
           ),

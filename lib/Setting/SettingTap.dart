@@ -11,6 +11,7 @@ class SettingTab extends StatelessWidget {
         child: Column(crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             InkWell(onTap: (){
+              Navigator.pop(context);
               Navigator.pushNamed(context, Profile.routName);
             },
                 child: Container(child: Text('بياناتي',style: TextStyle(fontSize: 25.0),),)),
