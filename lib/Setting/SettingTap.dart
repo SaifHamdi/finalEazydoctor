@@ -1,5 +1,6 @@
 import 'package:eazyydoctor/Setting/Profile.dart';
-import 'package:eazyydoctor/login.dart';
+import 'package:eazyydoctor/SignInScreen.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 class SettingTab extends StatelessWidget {
@@ -20,7 +21,10 @@ class SettingTab extends StatelessWidget {
             InkWell(onTap: (){},
                 child: Container(child: Text('اسئلني',style: TextStyle(fontSize: 25.0),),)),
             InkWell(onTap: (){
-              Navigator.pushNamed(context, LoginScreen.routeName);
+              FirebaseAuth.instance.signOut().then((value) {
+                print("signed out");
+                Navigator.push(context, MaterialPageRoute(builder: (context) => SignInScreen()));
+              });
             },
                 child: Container(child: Text('خروج',style: TextStyle(fontSize: 25.0),),)),
           ],
