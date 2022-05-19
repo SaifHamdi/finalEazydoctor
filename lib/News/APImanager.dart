@@ -11,12 +11,12 @@ class ApiManager{
       'apiKey':apiKey,
       'articles': Articles
     };
-    var uri= Uri.http('newsapi.org', '/v2/top-headlines?country=eg&category=health',params);
+    var uri= Uri.parse('newsapi.org/v2/top-headlines?country=eg&category=health&apiKey=${apiKey}');
 
     var response = await http.get(uri);
-    var newsResponse= NewsResponse.fromJson(jsonDecode(response.body));
+    var data= jsonDecode(response.body);
     if(response.statusCode==200){
-      return newsResponse;
+      return data;
     }else{
       throw Exception('Can not get the article');
     }
