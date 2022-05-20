@@ -34,7 +34,39 @@ class SettingTab extends StatelessWidget {
                   child:Text('My Profile',style: TextStyle(fontSize: 20.0,fontWeight: FontWeight.normal,color: Colors.black) ,),)),
               ),
               SizedBox(height: 10,),
-              Divider(height: 20,thickness: 1,),
+              Divider(thickness: 1,),
+              Container(color:MyThemeData.primaryColor,
+                child: Row(
+                  children: [
+                    Icon(Icons.language,color:Colors.black,),
+                    builAccountOption(context, 'language'),
+                  ],
+                ),
+              ),
+              Divider(thickness: 1,),
+              Container(alignment: Alignment.topLeft,
+                color:MyThemeData.primaryColor,
+                child: TextButton(onPressed:(){}, child: Container(
+                  child:Row(
+                    children: [
+                      Text('FAQ',style: TextStyle(fontSize: 15.0,fontWeight: FontWeight.normal,color: Colors.black) ,),SizedBox(width: 5,),
+                      Icon(Icons.mark_chat_read_outlined,color: Colors.black,),
+                    ],
+                  ),)),
+              ),
+              Divider(thickness: 1,),
+              Container(alignment: Alignment.topLeft,
+                color:MyThemeData.primaryColor,
+                child: TextButton(onPressed:(){}, child: Container(
+                  child:Row(
+                    children: [
+                      Text('About US',style: TextStyle(fontSize: 15.0,fontWeight: FontWeight.normal,color: Colors.black) ,),SizedBox(width: 5,),
+                      Icon(Icons.face,color: Colors.black,),
+                    ],
+                  ),)),
+              ),
+              Divider(thickness: 1,),
+              SizedBox(height: 5,),
               TextButton(onPressed: (){
                 FirebaseAuth.instance.signOut().then((value) {
                   print("signed out");
@@ -46,36 +78,6 @@ class SettingTab extends StatelessWidget {
                       children: [
                         Icon(Icons.logout,color: MyThemeData.primaryColor,), SizedBox(width: 10,),
                         Text('Logout',style: TextStyle(fontSize: 20.0,color: Colors.black),),],)),),
-              Divider(thickness: 1,),
-              Row(
-                children: [
-                  Icon(Icons.language,color:MyThemeData.primaryColor,),
-                  builAccountOption(context, 'language'),
-                ],
-              ),
-              Divider(thickness: 1,),
-              Container(alignment: Alignment.topLeft,
-                color:MyThemeData.primaryColor,
-                child: TextButton(onPressed:(){}, child: Container(
-                  child:Row(
-                    children: [
-                      Text('FAQ',style: TextStyle(fontSize: 20.0,fontWeight: FontWeight.normal,color: Colors.black) ,),SizedBox(width: 5,),
-                      Icon(Icons.mark_chat_read_outlined,color: Colors.black,),
-                    ],
-                  ),)),
-              ),
-              Divider(thickness: 1,),
-              Container(alignment: Alignment.topLeft,
-                color:MyThemeData.primaryColor,
-                child: TextButton(onPressed:(){}, child: Container(
-                  child:Row(
-                    children: [
-                      Text('About US',style: TextStyle(fontSize: 20.0,fontWeight: FontWeight.normal,color: Colors.black) ,),SizedBox(width: 5,),
-                      Icon(Icons.mark_chat_read_outlined,color: Colors.black,),
-                    ],
-                  ),)),
-              ),
-
              ],
           ),
       ),
