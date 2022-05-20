@@ -49,7 +49,7 @@ class SettingTab extends StatelessWidget {
                 child: TextButton(onPressed:(){}, child: Container(
                   child:Row(
                     children: [
-                      Text('FAQ',style: TextStyle(fontSize: 15.0,fontWeight: FontWeight.normal,color: Colors.black) ,),SizedBox(width: 5,),
+                      Text('FAQ',style: TextStyle(fontSize: 20.0,fontWeight: FontWeight.normal,color: Colors.black) ,),SizedBox(width: 5,),
                       Icon(Icons.mark_chat_read_outlined,color: Colors.black,),
                     ],
                   ),)),
