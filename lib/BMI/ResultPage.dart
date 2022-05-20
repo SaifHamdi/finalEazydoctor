@@ -45,11 +45,18 @@ class ResultPage extends StatelessWidget {
                     style: TextStyle(fontSize: 30),
 
                   ),
-                  Text(
-                    bmiResult,
-                    style: TextStyle(fontSize: 35),
-
-                  ),
+                  Column(
+                    children:[Text('Your BMI',style: TextStyle(fontSize: 30),),
+            Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          bmiResult,
+                          style: TextStyle(fontSize: 45),
+                        ),Text('%',style: TextStyle(fontSize: 45),),
+                      ],
+                    ),
+                ],  ),
                   Text(
                     interpretation,
                     style: TextStyle(fontSize: 25),
