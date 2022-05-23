@@ -1,4 +1,7 @@
 import 'package:eazyydoctor/src/models/medicine.dart';
+import 'package:eazyydoctor/src/ui/homepage/homepage.dart';
+import 'package:eazyydoctor/src/ui/mainn.dart';
+import 'package:eazyydoctor/src/ui/new_entry/new_entry.dart';
 import 'package:eazyydoctor/themeData.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -111,10 +114,11 @@ class MedicineDetails extends StatelessWidget {
                       GestureDetector(
                         onTap: () {
                           _globalBloc.removeMedicine(medicine);
-                          Navigator.popUntil(
-                            context,
-                            ModalRoute.withName('/'),
-                          );
+                          Navigator.push(
+                            context,MaterialPageRoute(builder: (BuildContext context) {
+          return MedicineReminder();}
+                          //  ModalRoute.withName('/'),
+                          ) );
                         },
                         child: InkWell(
                           child: Container(
@@ -232,7 +236,7 @@ class MainSection extends StatelessWidget {
     return Container(
       child: Row(
         children: <Widget>[
-          makeIcon(150),
+          makeIcon(140),
           SizedBox(
             width: 10,
           ),
