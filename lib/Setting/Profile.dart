@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 class Profile extends StatefulWidget {
-  static const routName='profile';
+  static const routeName='profile';
 
   @override
   _ProfileState createState() => _ProfileState();

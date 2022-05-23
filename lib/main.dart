@@ -1,3 +1,6 @@
+import 'package:eazyydoctor/Emergency/EmergencyTap.dart';
+import 'package:eazyydoctor/Emergency/id_screen.dart';
+import 'package:eazyydoctor/Emergency/national.dart';
 import 'package:eazyydoctor/Setting/Profile.dart';
 import 'package:eazyydoctor/SignInScreen.dart';
 import 'package:eazyydoctor/SignUpScreen.dart';
@@ -26,11 +29,15 @@ class MyApp extends StatelessWidget {
       ),
       routes: {
         HomeScreen.routeName: (buildContext)=>HomeScreen(),
-        Profile.routName: (buildContext)=>Profile(),
+        Profile.routeName: (buildContext)=>Profile(),
         SignInScreen.routeName: (buildContext)=>SignInScreen(),
-        SignUpScreen.routeName: (buildCcontext)=> SignUpScreen(),
+        SignUpScreen.routeName: (buildContext)=> SignUpScreen(),
         AlarmTap.routeName:(buildContext)=>AlarmTap(),
         AlarmResult.routeName:(buildContext)=>AlarmResult(),
+        EmergencyTab.routeName:(buildContext)=>EmergencyTab(),
+        NatScreen.routeName:(builContext)=>NatScreen(),
+        IdScreen.routeName:(buildContext)=>IdScreen(),
+
     },
       initialRoute: SignInScreen.routeName,
     );

@@ -75,7 +75,7 @@ class _HomeScreenState extends State<HomeScreen> {
     }else if (currentPage==2){
       return AlarmTap();
     }else if (currentPage==3){
-      return EmergencyTap();
+      return EmergencyTab();
     }else
       return SettingTab();
   }
