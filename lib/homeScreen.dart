@@ -1,8 +1,9 @@
-import 'package:eazyydoctor/Alarm/AlarmTab.dart';
+import 'package:eazyydoctor/src/ui/homepage/homepage.dart';
 import 'package:eazyydoctor/BMI/BmiTap.dart';
 import 'package:eazyydoctor/Emergency/EmergencyTap.dart';
 import 'package:eazyydoctor/News/NewsTap.dart';
 import 'package:eazyydoctor/Setting/SettingTap.dart';
+import 'package:eazyydoctor/src/ui/mainn.dart';
 import 'package:eazyydoctor/themeData.dart';
 import 'package:flutter/material.dart';
 
@@ -73,7 +74,7 @@ class _HomeScreenState extends State<HomeScreen> {
     } else if (currentPage==1){
       return BmiTap();
     }else if (currentPage==2){
-      return AlarmTap();
+      return MedicineReminder();
     }else if (currentPage==3){
       return EmergencyTap();
     }else

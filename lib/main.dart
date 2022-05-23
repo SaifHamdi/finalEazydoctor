@@ -6,8 +6,6 @@ import 'package:eazyydoctor/themeData.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
-import 'Alarm/AlarmResult.dart';
-import 'Alarm/AlarmTab.dart';
 
 void main() async{
   WidgetsFlutterBinding.ensureInitialized();
@@ -29,8 +27,8 @@ class MyApp extends StatelessWidget {
         Profile.routName: (buildContext)=>Profile(),
         SignInScreen.routeName: (buildContext)=>SignInScreen(),
         SignUpScreen.routeName: (buildCcontext)=> SignUpScreen(),
-        AlarmTap.routeName:(buildContext)=>AlarmTap(),
-        AlarmResult.routeName:(buildContext)=>AlarmResult(),
+       // AlarmTap.routeName:(buildContext)=>AlarmTap(),
+        //AlarmResult.routeName:(buildContext)=>AlarmResult(),
     },
       initialRoute: SignInScreen.routeName,
     );
