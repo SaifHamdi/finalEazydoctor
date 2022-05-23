@@ -21,6 +21,20 @@ class MyApp extends StatelessWidget {
       title: 'Eazy Doctor',
       theme: ThemeData(
         primaryColor: MyThemeData.primaryColor,
+        inputDecorationTheme: InputDecorationTheme(
+        enabledBorder: OutlineInputBorder(
+        borderSide: BorderSide(color: Colors.grey),
+    borderRadius: BorderRadius.circular(25),
+    ),
+    disabledBorder:  OutlineInputBorder(
+    borderSide: BorderSide(color: Colors.grey),
+    borderRadius: BorderRadius.circular(25),
+    ),
+    focusedBorder:  OutlineInputBorder(
+    borderSide: BorderSide(color: Colors.grey),
+    borderRadius: BorderRadius.circular(25),
+    ),
+        ),
       ),
       routes: {
         HomeScreen.routeName: (buildContext)=>HomeScreen(),
