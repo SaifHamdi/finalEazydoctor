@@ -31,7 +31,7 @@ class SettingTab extends StatelessWidget {
                 color:MyThemeData.primaryColor,
                 child: TextButton(onPressed:(){Navigator.pop(context);
                 Navigator.pushNamed(context, Profile.routName);}, child: Container(
-                  child:Text('My Profile',style: TextStyle(fontSize: 20.0,fontWeight: FontWeight.normal,color: Colors.black) ,),)),
+                  child:Text('My Profile',style: TextStyle(fontSize: 20.0,fontWeight: FontWeight.normal,color: Colors.white) ,),)),
               ),
               SizedBox(height: 10,),
               Divider(thickness: 1,),
