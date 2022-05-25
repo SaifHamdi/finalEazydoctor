@@ -11,6 +11,7 @@ import 'package:flutter/material.dart';
 
 import 'Alarm/AlarmResult.dart';
 import 'Alarm/AlarmTab.dart';
+import 'Emergency/file.dart';
 
 void main() async{
   WidgetsFlutterBinding.ensureInitialized();
@@ -49,8 +50,9 @@ class MyApp extends StatelessWidget {
         AlarmTap.routeName:(buildContext)=>AlarmTap(),
         AlarmResult.routeName:(buildContext)=>AlarmResult(),
         EmergencyTab.routeName:(buildContext)=>EmergencyTab(),
-        NatScreen.routeName:(builContext)=>NatScreen(),
+        NatScreen.routeName:(buildContext)=>NatScreen(),
         IdScreen.routeName:(buildContext)=>IdScreen(),
+        FileScreen.routeName:(buildContext)=>FileScreen(),
 
     },
       initialRoute: SignInScreen.routeName,

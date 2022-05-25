@@ -36,7 +36,7 @@ class IdScreen extends StatelessWidget{
                           letterSpacing: 1.3,
                         ),
                       ),
-                      Image.asset('assets/images/heart.png',height: 280,width: 160,),
+                      Image.asset('assets/images/x1.0/heart.jpg',height: 280,width: 160,),
                       SizedBox(height: 20,),
                     ],
                   ),

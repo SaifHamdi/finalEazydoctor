@@ -36,7 +36,7 @@ class NatScreen extends StatelessWidget {
                           letterSpacing: 1.3,
                         ),
                       ),
-                      Image.asset('assets/images/dcar.png', height: 180,width: 180, ),
+                      Image.asset('assets/images/x1.0/idcard.png', height: 180,width: 180, ),
                       SizedBox(height: 110,),
                     ],
                   ),
@@ -66,7 +66,7 @@ class NatScreen extends StatelessWidget {
               child: RaisedButton(
                 color: Colors.teal,
                 onPressed: () {
-                  Navigator.pushNamed(context,  FileScreen.fileRout);
+                  Navigator.pushNamed(context,  FileScreen.routeName);
                 },
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(40)

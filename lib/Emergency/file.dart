@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 class FileScreen extends StatelessWidget {
-  static const String fileRout ='file_screen';
+  static const String routeName ='file_screen';
   @override
   Widget build(BuildContext context){
     return Scaffold(
@@ -17,7 +17,7 @@ class FileScreen extends StatelessWidget {
                     letterSpacing: 1,
                   ),
                   ),
-                  Image.asset('assets/images/profile.png',height: 200,width: 180,),
+                  Image.asset('assets/images/x1.0/profile.png',height: 200,width: 180,),
                 ],
               ),
             )
