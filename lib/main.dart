@@ -1,3 +1,6 @@
+import 'package:eazyydoctor/Emergency/EmergencyTap.dart';
+import 'package:eazyydoctor/Emergency/id_screen.dart';
+import 'package:eazyydoctor/Emergency/national.dart';
 import 'package:eazyydoctor/Setting/Profile.dart';
 import 'package:eazyydoctor/SignInScreen.dart';
 import 'package:eazyydoctor/SignUpScreen.dart';
@@ -5,7 +8,7 @@ import 'package:eazyydoctor/homeScreen.dart';
 import 'package:eazyydoctor/themeData.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-
+import 'Emergency/file.dart';
 
 void main() async{
   WidgetsFlutterBinding.ensureInitialized();
@@ -22,27 +25,30 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primaryColor: MyThemeData.primaryColor,
         inputDecorationTheme: InputDecorationTheme(
-        enabledBorder: OutlineInputBorder(
-        borderSide: BorderSide(color: Colors.grey),
-    borderRadius: BorderRadius.circular(25),
-    ),
-    disabledBorder:  OutlineInputBorder(
-    borderSide: BorderSide(color: Colors.grey),
-    borderRadius: BorderRadius.circular(25),
-    ),
-    focusedBorder:  OutlineInputBorder(
-    borderSide: BorderSide(color: Colors.grey),
-    borderRadius: BorderRadius.circular(25),
-    ),
+          enabledBorder: OutlineInputBorder(
+            borderSide: BorderSide(color: Colors.grey),
+            borderRadius: BorderRadius.circular(25),
+          ),
+          disabledBorder:  OutlineInputBorder(
+            borderSide: BorderSide(color: Colors.grey),
+            borderRadius: BorderRadius.circular(25),
+          ),
+          focusedBorder:  OutlineInputBorder(
+            borderSide: BorderSide(color: Colors.grey),
+            borderRadius: BorderRadius.circular(25),
+          ),
         ),
       ),
       routes: {
         HomeScreen.routeName: (buildContext)=>HomeScreen(),
-        Profile.routName: (buildContext)=>Profile(),
+        Profile.routeName: (buildContext)=>Profile(),
         SignInScreen.routeName: (buildContext)=>SignInScreen(),
-        SignUpScreen.routeName: (buildCcontext)=> SignUpScreen(),
-       // AlarmTap.routeName:(buildContext)=>AlarmTap(),
-        //AlarmResult.routeName:(buildContext)=>AlarmResult(),
+        SignUpScreen.routeName: (buildContext)=> SignUpScreen(),
+        EmergencyTab.routeName:(buildContext)=>EmergencyTab(),
+        NatScreen.routeName:(buildContext)=>NatScreen(),
+        IdScreen.routeName:(buildContext)=>IdScreen(),
+        FileScreen.routeName:(buildContext)=>FileScreen(),
+
     },
       initialRoute: SignInScreen.routeName,
     );
